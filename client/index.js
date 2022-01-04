@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ApolloClient from 'apollo-client';
-import {ApolloClient} from 'react-apollo'
+import {ApolloProvider} from 'react-apollo';
 
 const client = new ApolloClient({})
 
 const Root = () => {
   return (
-    <ApolloClient client={client}>
-      <div>Lyrical</div>
-    </ApolloClient>
-  )
+      <ApolloProvider client={client}>
+        <div>
+          Auth Starter
+        </div>
+      </ApolloProvider>
+  );
 };
 
 ReactDOM.render(
